@@ -1,15 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// Defining a class
+class Car {
+    // Attributes (properties)
+    private String color;
+    private String model;
+    private int year;
+
+    // Constructor
+    public Car(String color, String model, int year) {
+        this.color = color;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method (behavior)
+    public void displayInfo() {
+        System.out.println("Car Model: " + model + ", Color: " + color + ", Year: " + year);
+    }
+
+    // Getters and Setters (for encapsulation)
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    // Additional getters and setters...
+}
+
+// Creating objects
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Car car1 = new Car("Red", "Toyota Camry", 2020);
+        Car car2 = new Car("Blue", "Honda Accord", 2021);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        car1.displayInfo();
+        car2.displayInfo();
     }
 }
